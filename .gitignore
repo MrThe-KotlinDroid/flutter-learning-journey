@@ -1,3 +1,7 @@
-# https://dart.dev/guides/libraries/private-files
-# Created by `dart pub`
+# Dart / Flutter tooling
 .dart_tool/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
