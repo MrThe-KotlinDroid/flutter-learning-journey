@@ -39,4 +39,12 @@ void main() {
   value = 24; // 1st data type change
   value = true; // 2nd data type change and can go on...
   print(value);
+
+  int num1 = 2;
+  double num2 = 3.0;
+
+  //"is" is the instance-of operator
+  print((num1 + num2) is int);
+  //print runtimetype of an object
+  print((num1 + num2).runtimeType); 
 }
