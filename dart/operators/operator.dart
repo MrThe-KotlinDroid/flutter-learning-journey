@@ -31,4 +31,10 @@ void main() {
   print(v);
   c--; //c-1
   print(c);
+
+  //Ternary
+  String color = "blue";
+  var isThisBlue = color == "blue" ? "Yep, blue it is" : "Nah, it aint blue";
+  print(isThisBlue);
+
 }

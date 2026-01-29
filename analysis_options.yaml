@@ -1,0 +1,22 @@
+linter:
+  rules:
+    # ---------- Style & readability ----------
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    avoid_print: false
+    always_declare_return_types: true
+    type_annotate_public_apis: true
+
+    # ---------- Safety & correctness ----------
+    avoid_dynamic_calls: true
+    unnecessary_null_checks: true
+    unnecessary_null_aware_assignments: true
+
+    # ---------- Clean code ----------
+    avoid_unused_parameters: true
+    unnecessary_this: true
+    avoid_shadowing_type_parameters: true
+
+    # ---------- Learning-friendly ----------
+    omit_local_variable_types: false
+    public_member_api_docs: false
