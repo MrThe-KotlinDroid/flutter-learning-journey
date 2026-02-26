@@ -1,7 +1,0 @@
-# Dart / Flutter tooling
-.dart_tool/
-build/
-
-# OS
-.DS_Store
-Thumbs.db
