@@ -13,6 +13,5 @@ main() {
       print('$a * $b = ${a * b}');
     case Operation.divide:
       print('$a / $b = ${a / b}');
-      print();
   }
 }
