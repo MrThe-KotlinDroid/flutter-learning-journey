@@ -99,7 +99,7 @@ class Fan extends Appliance {
 
   @override
   turnOff() {
-    print('Fan is now off');
+    print('Fan is now off'); 
   }
 }
 
