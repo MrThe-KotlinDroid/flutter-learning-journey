@@ -1,6 +1,12 @@
 void main() {
-  Map person = <String, dynamic>{'name': 'Abrar', 'age': 36, 'height': 1.74};
-
-  var name = person['name'];
-  print(name);
+  const addRed = true;
+  const addBlue = false;
+  const extraColors = ['yellow', 'green'];
+  final colors = [
+      'gray', 'brown', 
+      if (addRed) 'red', 
+      if (addBlue) 'blue',
+      ...extraColors,
+    ];
+  print(colors);
 }
