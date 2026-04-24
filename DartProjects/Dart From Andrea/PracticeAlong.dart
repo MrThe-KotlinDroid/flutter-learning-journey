@@ -1,10 +1,6 @@
 main() {
-  int x = -1;
-  int? maybeValue;
-  if (x > 0) {
-    maybeValue = x;
+  var cities = <String?>['London', 'Dhaka', 'Berlin', null];
+  for (var city in cities) {
+    print(city?.toUpperCase());
   }
-  maybeValue ??= 0;
-  int value = maybeValue;
-  print(value);
 }
