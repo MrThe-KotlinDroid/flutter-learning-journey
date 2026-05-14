@@ -1,6 +1,11 @@
-main() {
-  var cities = <String?>['London', 'Dhaka', 'Berlin', null];
-  for (var city in cities) {
-    print(city?.toUpperCase());
+void main() {
+  
+}
+
+double sum(List<double> values) {
+  double resultSum = 0;
+  for (double value in values) {
+    resultSum += value;
   }
+  return resultSum;
 }
