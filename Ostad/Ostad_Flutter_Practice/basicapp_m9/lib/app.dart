@@ -1,5 +1,5 @@
-import 'package:basicapp_m9/media_query.dart';
 import 'package:basicapp_m9/module_10/class_3.dart';
+import 'package:basicapp_m9/module_12/class_1.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter 16 Mine',
-      home: Module10Class3()
+      home: Module12class1()
     );
   }
 }
