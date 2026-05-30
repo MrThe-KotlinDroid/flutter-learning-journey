@@ -1,16 +1,17 @@
 void main() {
   const list = [1, 2, 3];
+  const l2 = [1.0, 2.0, 3.0];
   list.forEach((value) => print(value));
   // final doubles = list.map((value) => value * 2).toList();
   // final double = doubleItems(list);
-  final double = transform(list, (x) => x * 2);
-  final triple = transform(list, (x) => x * 3);
-  print(double);
-  print(triple);
+  final doubles = transform<int>(list, (x) => x * 2);
+  final sqaures = transform<double>(l2, (x) => x * x);
+  print(doubles);
+  print(sqaures);
 }
 
-List<int> transform(List<int> items, int Function(int) f) {
-  var result = <int>[];
+List<T> transform<T>(List<T> items, T Function(T) f) {
+  var result = <T>[];
   for (var x in items) {
     result.add(f(x));
   }
