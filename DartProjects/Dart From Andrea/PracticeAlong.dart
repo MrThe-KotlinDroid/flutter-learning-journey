@@ -4,7 +4,9 @@ void main() {
   // final doubles = list.map((value) => value * 2).toList();
   // final double = doubleItems(list);
   final double = transform(list, (x) => x * 2);
+  final triple = transform(list, (x) => x * 3);
   print(double);
+  print(triple);
 }
 
 List<int> transform(List<int> items, int Function(int) f) {
