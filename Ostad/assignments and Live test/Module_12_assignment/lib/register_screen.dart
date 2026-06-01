@@ -125,44 +125,44 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
                 const SizedBox(height: 24),
-                const Center(
-                  child: Text(
-                    'Or sign up with',
-                    style: TextStyle(color: Colors.grey),
-                  ),
-                ),
-                const SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    _buildSocialIcon('assets/facebook.png', Icons.facebook, Colors.blue),
-                    const SizedBox(width: 20),
-                    _buildSocialIcon('assets/google.png', Icons.g_mobiledata, Colors.red),
-                    const SizedBox(width: 20),
-                    _buildSocialIcon('assets/linkedin.png', Icons.link, Colors.blue.shade800),
-                  ],
-                ),
-                const SizedBox(height: 24),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text('Already have an account? '),
-                    TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(
-                        padding: EdgeInsets.zero,
-                        minimumSize: Size.zero,
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      ),
+                    const Text(
+                      "Don't have an account? ",
+                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
                       child: const Text(
-                        'Log In',
+                        'Sign in',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
+                          fontSize: 16,
                         ),
                       ),
                     ),
                   ],
+                ),
+                const SizedBox(height: 16),
+                const Center(
+                  child: Text(
+                    'or',
+                    style: TextStyle(color: Colors.grey, fontSize: 16),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                _buildSocialButton(
+                  icon: Icons.g_mobiledata,
+                  text: 'Continue with Google',
+                  iconColor: Colors.red,
+                ),
+                const SizedBox(height: 16),
+                _buildSocialButton(
+                  icon: Icons.apple,
+                  text: 'Continue with Apple',
+                  iconColor: Colors.black,
                 ),
               ],
             ),
@@ -172,14 +172,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  Widget _buildSocialIcon(String assetPath, IconData fallbackIcon, Color color) {
+  Widget _buildSocialButton({
+    required IconData icon,
+    required String text,
+    required Color iconColor,
+  }) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      width: double.infinity,
+      height: 56,
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
+        borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.grey.shade300),
       ),
-      child: Icon(fallbackIcon, color: color, size: 28),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(icon, color: iconColor, size: 28),
+          const SizedBox(width: 12),
+          Text(
+            text,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Colors.black87,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
