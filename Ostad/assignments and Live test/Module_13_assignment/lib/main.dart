@@ -1,31 +1,27 @@
 import 'package:flutter/material.dart';
-import 'screens/todo_screen.dart';
-import 'screens/create_task_screen.dart';
-import 'screens/completed_tasks_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(const TodoApp());
+  runApp(const CounterApp());
 }
 
-class TodoApp extends StatelessWidget {
-  const TodoApp({super.key});
+class CounterApp extends StatelessWidget {
+  const CounterApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Todo App',
+      title: 'Counter Navigation App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          surface: const Color(0xFFFBF8FF),
+        ),
+        useMaterial3: true,
         fontFamily: 'Inter',
-        scaffoldBackgroundColor: Colors.white,
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const TodoScreen(),
-        '/create': (context) => const CreateTaskScreen(),
-        '/completed': (context) => const CompletedTasksScreen(),
-      },
+      home: const HomeScreen(),
     );
   }
 }

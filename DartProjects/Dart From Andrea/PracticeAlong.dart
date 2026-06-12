@@ -1,5 +1,8 @@
 class Account {
-  double balance = 0;
+  Account({required this.AccountHolder, this.balance = 0});
+
+  final String AccountHolder;
+  double balance;
 
   void deposit(double amount) {
     balance += amount;
@@ -15,8 +18,9 @@ class Account {
 }
 
 void main() {
-  var account1 = Account();
+  var account1 = Account(AccountHolder: "Abrar");
   account1.deposit(100);
+  print(account1.AccountHolder);
   print(account1.balance);
   account1.deposit(50);
   print(account1.balance);
